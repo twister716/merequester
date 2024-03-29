@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog],
 and this project adheres to [Semantic Versioning].
 
+## Unreleased
+
+### Changed
+
+- switched to proper screen registration and removed mixin
+- moved ME Requester Terminal model and textures to own namespace
+
+### Fixed
+
+- fixed ME Requester Terminal item not showing its face texture
+
 ## [1.1.5] - 2024-03-28
 
 ### Changed
