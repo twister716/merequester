@@ -9,8 +9,7 @@
   "client": [
     "accessors.EditBoxMixin",
     "accessors.SlotMixin",
-    "accessors.WidgetContainerMixin",
-    "registration.InitScreensMixin"
+    "accessors.WidgetContainerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
