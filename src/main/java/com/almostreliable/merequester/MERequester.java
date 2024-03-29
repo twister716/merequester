@@ -1,5 +1,7 @@
 package com.almostreliable.merequester;
 
+import appeng.api.util.AEColor;
+import appeng.client.render.StaticItemColor;
 import appeng.init.client.InitScreens;
 import com.almostreliable.merequester.client.RequesterScreen;
 import com.almostreliable.merequester.client.RequesterTerminalScreen;
@@ -12,6 +14,7 @@ import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.loading.FMLEnvironment;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import org.slf4j.Logger;
 
@@ -29,6 +32,7 @@ public final class MERequester {
         modEventBus.addListener(PacketHandler::onPacketRegistration);
         if (FMLEnvironment.dist.isClient()) {
             modEventBus.addListener(MERequesterClient::registerScreens);
+            modEventBus.addListener(MERequesterClient::registerColors);
         }
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.COMMON_SPEC);
@@ -44,6 +48,10 @@ public final class MERequester {
                 RequesterTerminalScreen::new,
                 String.format("/screens/%s.json", TERMINAL_ID)
             );
+        }
+
+        private static void registerColors(RegisterColorHandlersEvent.Item event) {
+            event.register(new StaticItemColor(AEColor.TRANSPARENT), Registration.REQUESTER_TERMINAL);
         }
     }
 }
