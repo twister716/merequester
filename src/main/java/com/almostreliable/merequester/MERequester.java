@@ -2,20 +2,15 @@ package com.almostreliable.merequester;
 
 import com.almostreliable.merequester.data.MERequesterData;
 import com.almostreliable.merequester.network.PacketHandler;
-import com.almostreliable.merequester.requester.RequesterMenu;
-import com.almostreliable.merequester.terminal.RequesterTerminalMenu;
+
 import com.mojang.logging.LogUtils;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
-import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.loading.FMLEnvironment;
-import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
-import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import org.slf4j.Logger;
 
-@Mod(BuildConfig.MOD_ID)
+@Mod(ModConstants.MOD_ID)
 public final class MERequester {
 
     public static final Logger LOGGER = LogUtils.getLogger();

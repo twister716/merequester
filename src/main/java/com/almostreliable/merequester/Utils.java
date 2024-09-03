@@ -1,10 +1,11 @@
 package com.almostreliable.merequester;
 
-import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
+
+import com.mojang.blaze3d.platform.InputConstants;
 
 import java.util.List;
 
@@ -13,7 +14,7 @@ public final class Utils {
     private Utils() {}
 
     public static ResourceLocation getRL(String path) {
-        return ResourceLocation.fromNamespaceAndPath(BuildConfig.MOD_ID, path);
+        return ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID, path);
     }
 
     public static int fillColorAlpha(ChatFormatting color) {
@@ -22,7 +23,7 @@ public final class Utils {
     }
 
     public static MutableComponent translate(String type, String key, Object... args) {
-        return Component.translatable(String.format("%s.%s.%s", type, BuildConfig.MOD_ID, key), args);
+        return Component.translatable(String.format("%s.%s.%s", type, ModConstants.MOD_ID, key), args);
     }
 
     public static String translateAsString(String type, String key) {

@@ -1,34 +1,40 @@
 package com.almostreliable.merequester;
 
-import appeng.api.AECapabilities;
-import appeng.api.parts.PartModels;
-import appeng.block.AEBaseBlock;
-import appeng.blockentity.AEBaseBlockEntity;
-import appeng.items.parts.PartItem;
-import appeng.items.parts.PartModelsHelper;
-import com.almostreliable.merequester.requester.RequesterBlock;
-import com.almostreliable.merequester.requester.RequesterBlockEntity;
-import com.almostreliable.merequester.terminal.RequesterTerminalPart;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+
+import com.almostreliable.merequester.requester.RequesterBlock;
+import com.almostreliable.merequester.requester.RequesterBlockEntity;
+import com.almostreliable.merequester.terminal.RequesterTerminalPart;
+
+import appeng.api.AECapabilities;
+import appeng.api.parts.PartModels;
+import appeng.block.AEBaseBlock;
+import appeng.blockentity.AEBaseBlockEntity;
+import appeng.items.parts.PartItem;
+import appeng.items.parts.PartModelsHelper;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.neoforged.neoforge.registries.*;
+import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredItem;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.RegisterEvent;
 
 import static com.almostreliable.merequester.MERequester.REQUESTER_ID;
 import static com.almostreliable.merequester.MERequester.TERMINAL_ID;
 
 public final class Registration {
 
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(BuildConfig.MOD_ID);
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(BuildConfig.MOD_ID);
+    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ModConstants.MOD_ID);
+    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ModConstants.MOD_ID);
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(
         Registries.BLOCK_ENTITY_TYPE,
-        BuildConfig.MOD_ID
+        ModConstants.MOD_ID
     );
 
     public static final DeferredBlock<RequesterBlock> REQUESTER_BLOCK = BLOCKS.registerBlock(
