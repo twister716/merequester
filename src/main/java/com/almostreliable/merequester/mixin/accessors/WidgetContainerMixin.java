@@ -1,7 +1,8 @@
 package com.almostreliable.merequester.mixin.accessors;
 
-import appeng.client.gui.WidgetContainer;
 import net.minecraft.client.gui.components.AbstractWidget;
+
+import appeng.client.gui.WidgetContainer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Accessor;
 

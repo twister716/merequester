@@ -1,8 +1,10 @@
 package com.almostreliable.merequester.client.abstraction;
 
+import net.minecraft.network.chat.Component;
+
 import com.almostreliable.merequester.requester.Requests;
 import com.almostreliable.merequester.requester.abstraction.RequestHost;
-import net.minecraft.network.chat.Component;
+
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 

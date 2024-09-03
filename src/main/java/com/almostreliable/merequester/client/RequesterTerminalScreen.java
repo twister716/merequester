@@ -1,5 +1,18 @@
 package com.almostreliable.merequester.client;
 
+import net.minecraft.client.renderer.Rect2i;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.player.Inventory;
+
+import com.almostreliable.merequester.Config;
+import com.almostreliable.merequester.MERequester;
+import com.almostreliable.merequester.Utils;
+import com.almostreliable.merequester.client.abstraction.AbstractRequesterScreen;
+import com.almostreliable.merequester.client.abstraction.RequesterReference;
+import com.almostreliable.merequester.requester.Requests.Request;
+import com.almostreliable.merequester.terminal.RequesterTerminalMenu;
+
 import appeng.api.config.Settings;
 import appeng.api.config.TerminalStyle;
 import appeng.api.stacks.AEKey;
@@ -8,21 +21,17 @@ import appeng.client.gui.widgets.AETextField;
 import appeng.client.gui.widgets.SettingToggleButton;
 import appeng.core.AEConfig;
 import appeng.core.localization.GuiText;
-import com.almostreliable.merequester.Config;
-import com.almostreliable.merequester.MERequester;
-import com.almostreliable.merequester.Utils;
-import com.almostreliable.merequester.client.abstraction.AbstractRequesterScreen;
-import com.almostreliable.merequester.client.abstraction.RequesterReference;
-import com.almostreliable.merequester.requester.Requests.Request;
-import com.almostreliable.merequester.terminal.RequesterTerminalMenu;
 import com.google.common.collect.HashMultimap;
-import net.minecraft.client.renderer.Rect2i;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.player.Inventory;
 
 import javax.annotation.Nullable;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.WeakHashMap;
 
 public class RequesterTerminalScreen<T extends RequesterTerminalMenu> extends AbstractRequesterScreen<T> {
 

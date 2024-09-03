@@ -1,10 +1,12 @@
 package com.almostreliable.merequester.mixin.registration;
 
-import appeng.init.InitMenuTypes;
-import com.almostreliable.merequester.requester.RequesterMenu;
-import com.almostreliable.merequester.terminal.RequesterTerminalMenu;
 import net.minecraft.core.Registry;
 import net.minecraft.world.inventory.MenuType;
+
+import com.almostreliable.merequester.requester.RequesterMenu;
+import com.almostreliable.merequester.terminal.RequesterTerminalMenu;
+
+import appeng.init.InitMenuTypes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Invoker;
 import org.spongepowered.asm.mixin.injection.At;

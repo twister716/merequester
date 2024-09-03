@@ -1,18 +1,20 @@
 package com.almostreliable.merequester.requester.abstraction;
 
-import appeng.api.behaviors.ContainerItemStrategies;
-import appeng.api.networking.IGrid;
-import appeng.api.stacks.GenericStack;
-import appeng.helpers.InventoryAction;
-import appeng.menu.AEBaseMenu;
-import com.almostreliable.merequester.MERequester;
-import com.almostreliable.merequester.network.RequesterSyncPacket;
-import com.almostreliable.merequester.requester.RequesterBlockEntity;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.ItemStack;
+
+import com.almostreliable.merequester.MERequester;
+import com.almostreliable.merequester.network.RequesterSyncPacket;
+import com.almostreliable.merequester.requester.RequesterBlockEntity;
+
+import appeng.api.behaviors.ContainerItemStrategies;
+import appeng.api.networking.IGrid;
+import appeng.api.stacks.GenericStack;
+import appeng.helpers.InventoryAction;
+import appeng.menu.AEBaseMenu;
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import javax.annotation.Nullable;

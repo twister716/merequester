@@ -1,8 +1,5 @@
 package com.almostreliable.merequester.client.widgets;
 
-import appeng.client.gui.widgets.ITooltip;
-import com.almostreliable.merequester.Utils;
-import com.almostreliable.merequester.requester.status.RequestStatus;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
@@ -10,6 +7,11 @@ import net.minecraft.client.gui.narration.NarrationElementOutput;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.Rect2i;
 import net.minecraft.network.chat.Component;
+
+import com.almostreliable.merequester.Utils;
+import com.almostreliable.merequester.requester.status.RequestStatus;
+
+import appeng.client.gui.widgets.ITooltip;
 
 import java.util.ArrayList;
 import java.util.List;

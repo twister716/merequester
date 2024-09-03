@@ -1,11 +1,13 @@
 package com.almostreliable.merequester.client.widgets;
 
-import appeng.client.gui.style.ScreenStyle;
+import net.minecraft.client.gui.components.AbstractWidget;
+
 import com.almostreliable.merequester.client.abstraction.RequestDisplay;
 import com.almostreliable.merequester.client.abstraction.RequesterReference;
 import com.almostreliable.merequester.network.RequestUpdatePacket;
 import com.almostreliable.merequester.requester.Requests.Request;
-import net.minecraft.client.gui.components.AbstractWidget;
+
+import appeng.client.gui.style.ScreenStyle;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.neoforge.network.PacketDistributor;

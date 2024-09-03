@@ -1,8 +1,9 @@
 package com.almostreliable.merequester.requester.status;
 
+import com.almostreliable.merequester.requester.RequesterBlockEntity;
+
 import appeng.api.networking.crafting.CalculationStrategy;
 import appeng.api.networking.ticking.TickRateModulation;
-import com.almostreliable.merequester.requester.RequesterBlockEntity;
 
 public class RequestState implements StatusState {
 

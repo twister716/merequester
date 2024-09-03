@@ -1,8 +1,9 @@
 package com.almostreliable.merequester.requester.status;
 
+import com.almostreliable.merequester.requester.RequesterBlockEntity;
+
 import appeng.api.networking.crafting.ICraftingPlan;
 import appeng.api.networking.ticking.TickRateModulation;
-import com.almostreliable.merequester.requester.RequesterBlockEntity;
 
 import java.util.Objects;
 import java.util.concurrent.ExecutionException;

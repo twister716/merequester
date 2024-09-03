@@ -6,7 +6,6 @@
     "active=true,facing=north": {
       "model": "merequester:block/requester_active"
     },
-
     "active=false,facing=east": {
       "model": "merequester:block/requester",
       "y": 90
@@ -15,7 +14,6 @@
       "model": "merequester:block/requester_active",
       "y": 90
     },
-
     "active=false,facing=south": {
       "model": "merequester:block/requester",
       "y": 180
@@ -24,7 +22,6 @@
       "model": "merequester:block/requester_active",
       "y": 180
     },
-
     "active=false,facing=west": {
       "model": "merequester:block/requester",
       "y": 270
@@ -33,7 +30,6 @@
       "model": "merequester:block/requester_active",
       "y": 270
     },
-
     "active=false,facing=up,spin=0": {
       "ae2:z": 180,
       "model": "merequester:block/requester",
@@ -53,7 +49,6 @@
       "model": "merequester:block/requester",
       "x": 270
     },
-
     "active=true,facing=up,spin=0": {
       "ae2:z": 180,
       "model": "merequester:block/requester_active",
@@ -73,7 +68,6 @@
       "model": "merequester:block/requester_active",
       "x": 270
     },
-
     "active=false,facing=down,spin=0": {
       "model": "merequester:block/requester",
       "x": 90
@@ -93,7 +87,6 @@
       "model": "merequester:block/requester",
       "x": 90
     },
-
     "active=true,facing=down,spin=0": {
       "model": "merequester:block/requester_active",
       "x": 90

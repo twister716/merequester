@@ -1,12 +1,5 @@
 package com.almostreliable.merequester.requester;
 
-import appeng.api.orientation.IOrientationStrategy;
-import appeng.block.AEBaseEntityBlock;
-import appeng.menu.MenuOpener;
-import appeng.menu.locator.MenuLocators;
-import appeng.util.InteractionUtil;
-import com.almostreliable.merequester.MERequester;
-import com.almostreliable.merequester.Utils;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
@@ -22,6 +15,15 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
+
+import com.almostreliable.merequester.MERequester;
+import com.almostreliable.merequester.Utils;
+
+import appeng.api.orientation.IOrientationStrategy;
+import appeng.block.AEBaseEntityBlock;
+import appeng.menu.MenuOpener;
+import appeng.menu.locator.MenuLocators;
+import appeng.util.InteractionUtil;
 
 import java.util.List;
 

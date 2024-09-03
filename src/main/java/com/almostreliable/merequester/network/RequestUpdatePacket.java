@@ -1,13 +1,12 @@
 package com.almostreliable.merequester.network;
 
-import com.almostreliable.merequester.Utils;
-import com.almostreliable.merequester.requester.abstraction.AbstractRequesterMenu;
-import io.netty.buffer.ByteBuf;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.player.Player;
+
+import com.almostreliable.merequester.Utils;
+import com.almostreliable.merequester.requester.abstraction.AbstractRequesterMenu;
+
 import net.neoforged.neoforge.network.handling.IPayloadContext;
 
 public record RequestUpdatePacket(

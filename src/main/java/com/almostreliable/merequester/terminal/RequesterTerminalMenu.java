@@ -1,20 +1,22 @@
 package com.almostreliable.merequester.terminal;
 
-import appeng.api.networking.IGrid;
-import appeng.api.networking.IGridNode;
-import appeng.api.networking.security.IActionHost;
-import appeng.menu.implementations.MenuTypeBuilder;
-import appeng.menu.implementations.PatternAccessTermMenu;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.inventory.MenuType;
+import net.minecraft.world.item.ItemStack;
+
 import com.almostreliable.merequester.MERequester;
 import com.almostreliable.merequester.network.RequesterSyncPacket;
 import com.almostreliable.merequester.requester.RequesterBlockEntity;
 import com.almostreliable.merequester.requester.abstraction.AbstractRequesterMenu;
 import com.almostreliable.merequester.requester.abstraction.RequestTracker;
+
+import appeng.api.networking.IGrid;
+import appeng.api.networking.IGridNode;
+import appeng.api.networking.security.IActionHost;
+import appeng.menu.implementations.MenuTypeBuilder;
+import appeng.menu.implementations.PatternAccessTermMenu;
 import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.inventory.MenuType;
-import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import javax.annotation.Nullable;

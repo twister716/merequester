@@ -1,13 +1,15 @@
 package com.almostreliable.merequester.client.widgets;
 
+import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.renderer.Rect2i;
+import net.minecraft.network.chat.Component;
+
+import com.almostreliable.merequester.Utils;
+
 import appeng.client.gui.style.Blitter;
 import appeng.client.gui.style.ScreenStyle;
 import appeng.client.gui.widgets.AECheckbox;
 import appeng.client.gui.widgets.ITooltip;
-import com.almostreliable.merequester.Utils;
-import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.renderer.Rect2i;
-import net.minecraft.network.chat.Component;
 
 import java.util.List;
 

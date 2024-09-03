@@ -1,9 +1,10 @@
 package com.almostreliable.merequester.requester.status;
 
+import com.almostreliable.merequester.requester.RequesterBlockEntity;
+
 import appeng.api.config.Actionable;
 import appeng.api.networking.ticking.TickRateModulation;
 import appeng.api.storage.StorageHelper;
-import com.almostreliable.merequester.requester.RequesterBlockEntity;
 
 public class ExportState implements StatusState {
 

@@ -1,5 +1,16 @@
 package com.almostreliable.merequester.requester;
 
+import net.minecraft.core.HolderLookup;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.util.Mth;
+import net.minecraft.world.item.ItemStack;
+
+import com.almostreliable.merequester.Config;
+import com.almostreliable.merequester.data.MERequesterRequest;
+import com.almostreliable.merequester.requester.abstraction.RequestHost;
+import com.almostreliable.merequester.requester.status.RequestStatus;
+
 import appeng.api.behaviors.GenericInternalInventory;
 import appeng.api.config.Actionable;
 import appeng.api.inventories.InternalInventory;
@@ -9,16 +20,7 @@ import appeng.api.stacks.AEKeyType;
 import appeng.api.stacks.GenericStack;
 import appeng.api.storage.MEStorage;
 import appeng.helpers.externalstorage.GenericStackInv;
-import com.almostreliable.merequester.Config;
-import com.almostreliable.merequester.data.MERequesterRequest;
-import com.almostreliable.merequester.requester.abstraction.RequestHost;
-import com.almostreliable.merequester.requester.status.RequestStatus;
 import com.google.common.primitives.Ints;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.chat.Component;
-import net.minecraft.util.Mth;
-import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.neoforge.common.util.INBTSerializable;

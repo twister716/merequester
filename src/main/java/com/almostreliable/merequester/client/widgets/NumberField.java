@@ -1,5 +1,13 @@
 package com.almostreliable.merequester.client.widgets;
 
+import net.minecraft.ChatFormatting;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.network.chat.Component;
+
+import com.almostreliable.merequester.Utils;
+import com.almostreliable.merequester.mixin.accessors.EditBoxMixin;
+
 import appeng.api.stacks.AEFluidKey;
 import appeng.api.stacks.AEKey;
 import appeng.client.gui.MathExpressionParser;
@@ -8,13 +16,7 @@ import appeng.client.gui.style.ScreenStyle;
 import appeng.client.gui.widgets.ConfirmableTextField;
 import appeng.client.gui.widgets.NumberEntryWidget;
 import appeng.core.localization.GuiText;
-import com.almostreliable.merequester.Utils;
-import com.almostreliable.merequester.mixin.accessors.EditBoxMixin;
 import com.mojang.blaze3d.platform.InputConstants;
-import net.minecraft.ChatFormatting;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.network.chat.Component;
 
 import javax.annotation.Nullable;
 import java.math.BigDecimal;

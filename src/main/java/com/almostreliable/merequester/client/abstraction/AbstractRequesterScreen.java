@@ -1,5 +1,24 @@
 package com.almostreliable.merequester.client.abstraction;
 
+import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.components.AbstractWidget;
+import net.minecraft.client.renderer.Rect2i;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.inventory.ClickType;
+import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.item.ItemStack;
+
+import com.almostreliable.merequester.MERequester;
+import com.almostreliable.merequester.Utils;
+import com.almostreliable.merequester.client.RequestSlot;
+import com.almostreliable.merequester.client.widgets.RequestWidget;
+import com.almostreliable.merequester.mixin.accessors.WidgetContainerMixin;
+import com.almostreliable.merequester.requester.Requests.Request;
+import com.almostreliable.merequester.requester.abstraction.AbstractRequesterMenu;
+
 import appeng.api.behaviors.ContainerItemStrategies;
 import appeng.api.behaviors.EmptyingAction;
 import appeng.api.stacks.GenericStack;
@@ -12,24 +31,7 @@ import appeng.core.localization.ButtonToolTips;
 import appeng.core.localization.Tooltips;
 import appeng.core.network.serverbound.InventoryActionPacket;
 import appeng.helpers.InventoryAction;
-import com.almostreliable.merequester.MERequester;
-import com.almostreliable.merequester.Utils;
-import com.almostreliable.merequester.client.RequestSlot;
-import com.almostreliable.merequester.client.widgets.RequestWidget;
-import com.almostreliable.merequester.mixin.accessors.WidgetContainerMixin;
-import com.almostreliable.merequester.requester.Requests.Request;
-import com.almostreliable.merequester.requester.abstraction.AbstractRequesterMenu;
 import com.mojang.blaze3d.platform.InputConstants;
-import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.gui.components.AbstractWidget;
-import net.minecraft.client.renderer.Rect2i;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.inventory.ClickType;
-import net.minecraft.world.inventory.Slot;
-import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import javax.annotation.Nullable;

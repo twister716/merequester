@@ -1,7 +1,8 @@
 package com.almostreliable.merequester.requester.status;
 
-import appeng.api.networking.ticking.TickRateModulation;
 import com.almostreliable.merequester.requester.RequesterBlockEntity;
+
+import appeng.api.networking.ticking.TickRateModulation;
 
 import javax.annotation.Nullable;
 

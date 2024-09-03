@@ -1,8 +1,9 @@
 package com.almostreliable.merequester.requester;
 
-import appeng.api.orientation.FacingWithSpinStrategy;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.state.BlockState;
+
+import appeng.api.orientation.FacingWithSpinStrategy;
 
 class FacingWithVerticalSpin extends FacingWithSpinStrategy {
 

@@ -1,14 +1,16 @@
 package com.almostreliable.merequester.client;
 
-import appeng.menu.slot.FakeSlot;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.ItemStack;
+
 import com.almostreliable.merequester.Utils;
 import com.almostreliable.merequester.client.abstraction.RequestDisplay;
 import com.almostreliable.merequester.client.abstraction.RequesterReference;
 import com.almostreliable.merequester.mixin.accessors.SlotMixin;
 import com.almostreliable.merequester.network.DragAndDropPacket;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.ItemStack;
+
+import appeng.menu.slot.FakeSlot;
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import javax.annotation.Nullable;

@@ -1,11 +1,12 @@
 package com.almostreliable.merequester.requester.status;
 
-import com.mojang.serialization.Codec;
-import io.netty.buffer.ByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.util.ByIdMap;
 import net.minecraft.util.StringRepresentable;
+
+import com.mojang.serialization.Codec;
+import io.netty.buffer.ByteBuf;
 
 import java.util.Locale;
 import java.util.function.IntFunction;

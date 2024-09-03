@@ -1,5 +1,27 @@
 package com.almostreliable.merequester.requester;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.component.DataComponentMap;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockState;
+
+import com.almostreliable.merequester.Config;
+import com.almostreliable.merequester.MERequester;
+import com.almostreliable.merequester.Registration;
+import com.almostreliable.merequester.Utils;
+import com.almostreliable.merequester.data.MERequesterData;
+import com.almostreliable.merequester.requester.abstraction.RequestHost;
+import com.almostreliable.merequester.requester.status.LinkState;
+import com.almostreliable.merequester.requester.status.RequestStatus;
+import com.almostreliable.merequester.requester.status.StatusState;
+
 import appeng.api.config.Actionable;
 import appeng.api.networking.GridFlags;
 import appeng.api.networking.IGrid;
@@ -17,30 +39,15 @@ import appeng.api.storage.StorageHelper;
 import appeng.blockentity.grid.AENetworkedBlockEntity;
 import appeng.me.helpers.MachineSource;
 import appeng.util.SettingsFrom;
-import com.almostreliable.merequester.Config;
-import com.almostreliable.merequester.MERequester;
-import com.almostreliable.merequester.Registration;
-import com.almostreliable.merequester.Utils;
-import com.almostreliable.merequester.data.MERequesterData;
-import com.almostreliable.merequester.requester.abstraction.RequestHost;
-import com.almostreliable.merequester.requester.status.LinkState;
-import com.almostreliable.merequester.requester.status.RequestStatus;
-import com.almostreliable.merequester.requester.status.StatusState;
 import com.google.common.collect.ImmutableSet;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.core.component.DataComponentMap;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.state.BlockState;
+
 import org.jetbrains.annotations.Nullable;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.EnumSet;
+import java.util.List;
+import java.util.Objects;
+import java.util.Set;
 
 public class RequesterBlockEntity extends AENetworkedBlockEntity implements RequestHost, IGridTickable, ICraftingRequester {
 

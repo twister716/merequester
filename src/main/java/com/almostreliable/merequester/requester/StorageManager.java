@@ -1,13 +1,15 @@
 package com.almostreliable.merequester.requester;
 
+import net.minecraft.core.HolderLookup;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.item.ItemStack;
+
+import com.almostreliable.merequester.Config;
+
 import appeng.api.config.FuzzyMode;
 import appeng.api.networking.IStackWatcher;
 import appeng.api.networking.storage.IStorageWatcherNode;
 import appeng.api.stacks.AEKey;
-import com.almostreliable.merequester.Config;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.common.util.INBTSerializable;
 
 import javax.annotation.Nullable;
