@@ -1,6 +1,6 @@
 <component name="InspectionProjectProfileManager">
   <profile version="1.0">
-    <option name="myName" value="Project Default" />
+    <option name="myName" value="Default" />
     <inspection_tool class="AbstractMethodCallInConstructor" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="AbstractMethodOverridesAbstractMethod" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="AbstractMethodWithMissingImplementations" enabled="true" level="WARNING" enabled_by_default="true" />
@@ -79,7 +79,6 @@
     <inspection_tool class="ComparatorCombinators" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="ComparatorResultComparison" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="CompareToUsesNonFinalVariable" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="ComparisonOfShortAndChar" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="ComparisonToNaN" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="ConditionalBreakInInfiniteLoop" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="noConversionToDoWhile" value="true" />
@@ -105,6 +104,44 @@
       <option name="REPLACE_TRIVIAL_FOREACH" value="true" />
     </inspection_tool>
     <inspection_tool class="CovariantEquals" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="CustomRegExpInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myConfigurations">
+        <list>
+          <RegExpInspectionConfiguration>
+            <option name="description" value="Prevents the usage of placeholders in parameter JavaDoc." />
+            <option name="name" value="No placeholders in param JavaDoc" />
+            <option name="suppressId" value="PlaceholderParamDoc" />
+            <option name="uuid" value="fd65eef7-01ba-387f-897b-d7bda28e0c36" />
+            <option name="patterns">
+              <list>
+                <InspectionPattern>
+                  <option name="regExp" value="^(\s*\*\s*@param .*)\{@\S+\s(.*)}(.*)$" />
+                  <option name="_fileType" value="JAVA" />
+                  <option name="searchContext" value="ANY" />
+                  <option name="replacement" value="$1$2$3" />
+                </InspectionPattern>
+              </list>
+            </option>
+          </RegExpInspectionConfiguration>
+          <RegExpInspectionConfiguration>
+            <option name="description" value="Encourages the use of Preconditions instead of Objects for null checks." />
+            <option name="name" value="Use Preconditions for null checks" />
+            <option name="suppressId" value="PreconditionNullChecks" />
+            <option name="uuid" value="204b80b4-e4ec-3a7c-9704-942e9df0af15" />
+            <option name="patterns">
+              <list>
+                <InspectionPattern>
+                  <option name="regExp" value="Objects\.requireNonNull" />
+                  <option name="_fileType" value="JAVA" />
+                  <option name="searchContext" value="ANY" />
+                  <option name="replacement" value="Preconditions.checkNotNull" />
+                </InspectionPattern>
+              </list>
+            </option>
+          </RegExpInspectionConfiguration>
+        </list>
+      </option>
+    </inspection_tool>
     <inspection_tool class="DanglingJavadoc" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="DeclareCollectionAsInterface" enabled="true" level="WEAK WARNING" enabled_by_default="true">
       <option name="ignoreLocalVariables" value="false" />
@@ -479,7 +516,7 @@
     <inspection_tool class="NewExpressionSideOnly" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="NewMethodNamingConvention" enabled="true" level="WEAK WARNING" enabled_by_default="true">
       <extension name="InstanceMethodNamingConvention" enabled="true">
-        <option name="m_regex" value="([a-z]*\$)?[a-z][A-Za-z\d]*" />
+        <option name="m_regex" value="([a-z]+\$)?[a-z][A-Za-z\d]*" />
         <option name="m_minLength" value="2" />
         <option name="m_maxLength" value="32" />
       </extension>
@@ -489,7 +526,7 @@
         <option name="m_maxLength" value="32" />
       </extension>
       <extension name="StaticMethodNamingConvention" enabled="true">
-        <option name="m_regex" value="([a-z]*\$)?[a-z][A-Za-z\d]*" />
+        <option name="m_regex" value="([a-z]+\$)?[a-z][A-Za-z\d]*" />
         <option name="m_minLength" value="1" />
         <option name="m_maxLength" value="32" />
       </extension>
@@ -503,7 +540,7 @@
       <option name="m_ignoreNonPublicClasses" value="false" />
     </inspection_tool>
     <inspection_tool class="NonPublicClone" enabled="true" level="WARNING" enabled_by_default="true" />
-    <inspection_tool class="NonShortCircuitBoolean" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="NonShortCircuitBoolean" enabled="true" level="INFORMATION" enabled_by_default="true" editorAttributes="INFORMATION_ATTRIBUTES" />
     <inspection_tool class="NoopMethodInAbstractClass" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="ObjectEquality" enabled="true" level="WEAK WARNING" enabled_by_default="true">
       <option name="m_ignoreEnums" value="true" />
@@ -625,7 +662,7 @@
     </inspection_tool>
     <inspection_tool class="StaticNonFinalField" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="StaticPseudoFunctionalStyleMethod" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
-    <inspection_tool class="StaticVariableInitialization" enabled="true" level="WARNING" enabled_by_default="true">
+    <inspection_tool class="StaticVariableInitialization" enabled="true" level="WEAK WARNING" enabled_by_default="true" editorAttributes="INFO_ATTRIBUTES">
       <option name="m_ignorePrimitives" value="true" />
     </inspection_tool>
     <inspection_tool class="StaticVariableUninitializedUse" enabled="true" level="WARNING" enabled_by_default="true">
@@ -644,6 +681,7 @@
     <inspection_tool class="StringReplaceableByStringBuffer" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="onlyWarnOnLoop" value="true" />
     </inspection_tool>
+    <inspection_tool class="StructuralWrap" enabled="true" level="INFORMATION" enabled_by_default="true" editorAttributes="INFORMATION_ATTRIBUTES" />
     <inspection_tool class="SubtractionInCompareTo" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="SuspiciousArrayCast" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="SuspiciousGetterSetter" enabled="true" level="INFORMATION" enabled_by_default="true" />
@@ -759,5 +797,6 @@
       <option name="SUGGEST_PRIVATE_FOR_INNERS" value="true" />
     </inspection_tool>
     <inspection_tool class="WrapperTypeMayBePrimitive" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="fd65eef7-01ba-387f-897b-d7bda28e0c36" enabled="false" level="WARNING" enabled_by_default="false" />
   </profile>
 </component>
