@@ -11,7 +11,7 @@ public class RequestState implements StatusState {
     @Override
     public StatusState handle(RequesterBlockEntity owner, int index) {
         var amountToCraft = owner.getStorageManager().computeAmountToCraft(index);
-        if (amountToCraft <= 0) return StatusState.IDLE;
+        if (amountToCraft <= 0) return IDLE;
         var key = owner.getRequests().getKey(index);
 
         var future = owner.getMainNodeGrid()

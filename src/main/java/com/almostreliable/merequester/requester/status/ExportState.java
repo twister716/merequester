@@ -13,7 +13,7 @@ public class ExportState implements StatusState {
     public StatusState handle(RequesterBlockEntity host, int index) {
         var storageManager = host.getStorageManager().get(index);
         if (storageManager.getKey() == null) {
-            return StatusState.IDLE;
+            return IDLE;
         }
 
         var inserted = StorageHelper.poweredInsert(
@@ -29,9 +29,9 @@ public class ExportState implements StatusState {
             return this;
         }
         if (inserted > 0) {
-            return StatusState.REQUEST;
+            return REQUEST;
         }
-        return StatusState.IDLE;
+        return IDLE;
     }
 
     @Override

@@ -9,11 +9,11 @@ public record LinkState(ICraftingLink link) implements StatusState {
     @Override
     public StatusState handle(RequesterBlockEntity host, int slot) {
         if (link.isDone()) {
-            return StatusState.EXPORT;
+            return EXPORT;
         }
 
         if (link.isCanceled()) {
-            return StatusState.IDLE;
+            return IDLE;
         }
 
         return this;
