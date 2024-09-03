@@ -3,7 +3,7 @@ package com.almostreliable.merequester.data;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.network.codec.ByteBufCodecs;
 
-import com.almostreliable.merequester.ModConstants;
+import com.almostreliable.merequester.BuildConfig;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -15,7 +15,7 @@ public final class MERequesterData {
     private MERequesterData() {}
 
     public static final DeferredRegister.DataComponents DR = DeferredRegister
-        .createDataComponents(ModConstants.MOD_ID);
+        .createDataComponents(BuildConfig.MOD_ID);
 
     public static final DataComponentType<List<MERequesterRequest>> EXPORTED_REQUESTER_REQUESTS = register("exported_requests", builder -> {
         builder.persistent(MERequesterRequest.CODEC.listOf())

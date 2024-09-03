@@ -17,14 +17,14 @@ description = '''${modDescription}'''
 [[dependencies."${modId}"]]
 modId = "neoforge"
 type = "REQUIRED"
-versionRange = "[${neoforgeVersion},)"
+versionRange = "[${neoVersion},)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies."${modId}"]]
 modId = "minecraft"
 type = "REQUIRED"
-versionRange = "[${minecraftVersion},)"
+versionRange = "[${mcVersion},)"
 ordering = "NONE"
 side = "BOTH"
 

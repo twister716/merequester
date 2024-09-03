@@ -10,7 +10,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import org.slf4j.Logger;
 
-@Mod(ModConstants.MOD_ID)
+@Mod(BuildConfig.MOD_ID)
 public final class MERequester {
 
     public static final Logger LOGGER = LogUtils.getLogger();
