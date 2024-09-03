@@ -11,12 +11,12 @@ public class IdleState implements StatusState {
     @Override
     public StatusState handle(RequesterBlockEntity host, int index) {
         if (host.getStorageManager().get(index).getBufferAmount() > 0) {
-            return StatusState.EXPORT;
+            return EXPORT;
         }
 
         var request = host.getRequests().get(index);
         if (request.isRequesting() && request.getAmount() > host.getStorageManager().get(index).getKnownAmount()) {
-            return StatusState.REQUEST;
+            return REQUEST;
         }
 
         return this;

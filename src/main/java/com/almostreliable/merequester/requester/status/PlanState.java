@@ -20,23 +20,23 @@ public final class PlanState implements StatusState {
     @Override
     public StatusState handle(RequesterBlockEntity host, int index) {
         if (!future.isDone()) return this;
-        if (future.isCancelled()) return StatusState.IDLE;
+        if (future.isCancelled()) return IDLE;
 
         try {
             var plan = future.get();
             if (!plan.missingItems().isEmpty()) {
-                return StatusState.MISSING;
+                return new MissingState();
             }
 
             var submitResult = host.getMainNodeGrid().getCraftingService().submitJob(plan, host, null, false, host.getActionSource());
             if (!submitResult.successful() || submitResult.link() == null) {
-                return StatusState.IDLE;
+                return IDLE;
             }
 
             host.getStorageManager().get(index).setTotalAmount(plan.finalOutput().amount());
             return new LinkState(Objects.requireNonNull(submitResult.link()));
         } catch (InterruptedException | ExecutionException e) {
-            return StatusState.IDLE;
+            return IDLE;
         }
     }
 

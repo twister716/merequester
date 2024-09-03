@@ -22,19 +22,19 @@ public class MissingState implements StatusState {
             return planSim;
         }
 
-        var idleSim = StatusState.IDLE.handle(host, slot);
-        if (idleSim == StatusState.IDLE || idleSim == StatusState.EXPORT) {
+        var idleSim = IDLE.handle(host, slot);
+        if (idleSim == IDLE || idleSim == EXPORT) {
             // idle simulation returning idle means a request is no
             // longer required because we have enough items
-            // idle state returning export should not be possible
+            // idle state returning export should not be possible,
             // but just in case, we will return to idle to handle it
-            return StatusState.IDLE;
+            return IDLE;
         }
 
         // idle sim returned that we can request
-        var requestSim = StatusState.REQUEST.handle(host, slot);
-        if (requestSim == StatusState.IDLE) {
-            return StatusState.IDLE;
+        var requestSim = REQUEST.handle(host, slot);
+        if (requestSim == IDLE) {
+            return IDLE;
         }
 
         // request sim returned that we can start planning

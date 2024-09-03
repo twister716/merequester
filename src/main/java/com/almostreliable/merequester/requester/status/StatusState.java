@@ -7,7 +7,6 @@ import appeng.api.networking.ticking.TickRateModulation;
 public interface StatusState {
 
     StatusState IDLE = new IdleState();
-    StatusState MISSING = new MissingState();
     StatusState REQUEST = new RequestState();
     StatusState EXPORT = new ExportState();
 
