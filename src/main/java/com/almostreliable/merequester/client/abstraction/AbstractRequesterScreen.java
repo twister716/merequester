@@ -170,7 +170,7 @@ public abstract class AbstractRequesterScreen<M extends AbstractRequesterMenu> e
         int textColor = style.getColor(PaletteColor.DEFAULT_TEXT_COLOR).toARGB();
 
         if (lines.isEmpty()) {
-            var text = Utils.translateAsString("gui", "no_requesters");
+            var text = Utils.translate("gui", "no_requesters").getString();
             var textWidth = font.width(text);
             guiGraphics.drawString(
                 font,

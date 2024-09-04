@@ -17,17 +17,8 @@ public final class Utils {
         return ResourceLocation.fromNamespaceAndPath(BuildConfig.MOD_ID, path);
     }
 
-    public static int fillColorAlpha(ChatFormatting color) {
-        // noinspection ConstantConditions
-        return 0xFF << 3 * 8 | color.getColor();
-    }
-
     public static MutableComponent translate(String type, String key, Object... args) {
         return Component.translatable(String.format("%s.%s.%s", type, BuildConfig.MOD_ID, key), args);
-    }
-
-    public static String translateAsString(String type, String key) {
-        return translate(type, key).getString();
     }
 
     public static void addShiftInfoTooltip(List<Component> tooltip) {
