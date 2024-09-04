@@ -6,7 +6,8 @@
 		"top": "ae2:block/generics/top",
 		"back": "ae2:block/generics/back",
 		"bottom": "ae2:block/generics/bottom",
-		"side": "ae2:block/generics/side"
+		"side": "ae2:block/generics/side",
+		"particle": "merequester:block/requester"
 	},
 	"elements": [
 		{

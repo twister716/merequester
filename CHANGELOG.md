@@ -6,7 +6,10 @@ The format is based on [Keep a Changelog],
 and this project adheres to [Semantic Versioning].
 
 ## Unreleased
-- /
+
+### Fixed
+
+- fixed block breaking particles of the Requester
 
 ## [1.1.7] - 2024-09-03
 
