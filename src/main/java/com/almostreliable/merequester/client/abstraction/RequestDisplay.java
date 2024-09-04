@@ -7,7 +7,8 @@ import net.minecraft.world.item.ItemStack;
 import com.almostreliable.merequester.client.RequestSlot;
 import com.almostreliable.merequester.requester.Request;
 
-import javax.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.List;
 import java.util.Map;
 

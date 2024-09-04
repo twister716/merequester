@@ -34,8 +34,9 @@ import appeng.helpers.InventoryAction;
 import com.mojang.blaze3d.platform.InputConstants;
 import net.neoforged.neoforge.network.PacketDistributor;
 
-import javax.annotation.Nullable;
-import javax.annotation.OverridingMethodsMustInvokeSuper;
+import org.jetbrains.annotations.MustBeInvokedByOverriders;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -131,7 +132,7 @@ public abstract class AbstractRequesterScreen<M extends AbstractRequesterMenu> e
     }
 
     @Override
-    @OverridingMethodsMustInvokeSuper
+    @MustBeInvokedByOverriders
     protected void init() {
         imageHeight = GUI_HEADER_HEIGHT + GUI_FOOTER_HEIGHT + rowAmount * ROW_HEIGHT;
 

@@ -15,7 +15,8 @@ import com.almostreliable.merequester.requester.RequesterMenu;
 
 import appeng.client.gui.style.ScreenStyle;
 
-import javax.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.Collections;
 import java.util.Set;
 

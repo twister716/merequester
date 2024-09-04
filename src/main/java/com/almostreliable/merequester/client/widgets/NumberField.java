@@ -18,7 +18,8 @@ import appeng.client.gui.widgets.NumberEntryWidget;
 import appeng.core.localization.GuiText;
 import com.mojang.blaze3d.platform.InputConstants;
 
-import javax.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
+
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;

@@ -12,7 +12,8 @@ import appeng.api.networking.storage.IStorageWatcherNode;
 import appeng.api.stacks.AEKey;
 import net.neoforged.neoforge.common.util.INBTSerializable;
 
-import javax.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.List;
 
 public class StorageManager implements IStorageWatcherNode, INBTSerializable<CompoundTag> {

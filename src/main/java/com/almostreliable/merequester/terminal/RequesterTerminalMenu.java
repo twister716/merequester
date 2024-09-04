@@ -20,7 +20,8 @@ import appeng.menu.implementations.PatternAccessTermMenu;
 import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
 import net.neoforged.neoforge.network.PacketDistributor;
 
-import javax.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.Comparator;
 import java.util.IdentityHashMap;
 import java.util.Map;

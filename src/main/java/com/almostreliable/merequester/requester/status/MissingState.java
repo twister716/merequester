@@ -4,7 +4,7 @@ import com.almostreliable.merequester.requester.RequesterBlockEntity;
 
 import appeng.api.networking.ticking.TickRateModulation;
 
-import javax.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 
 public class MissingState implements StatusState {
 

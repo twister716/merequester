@@ -20,8 +20,8 @@ import appeng.helpers.externalstorage.GenericStackInv;
 import com.google.common.primitives.Ints;
 import net.neoforged.neoforge.common.util.INBTSerializable;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -213,7 +213,7 @@ public class RequestManager implements MEStorage, GenericInternalInventory, Inte
     }
 
     @Override
-    public void setItemDirect(int slot, @Nonnull ItemStack stack) {
+    public void setItemDirect(int slot, ItemStack stack) {
         if (stack.isEmpty()) {
             setStack(slot, null);
         } else {

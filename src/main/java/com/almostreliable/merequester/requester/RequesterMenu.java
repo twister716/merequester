@@ -15,7 +15,7 @@ import appeng.api.networking.IGrid;
 import appeng.menu.implementations.MenuTypeBuilder;
 import net.neoforged.neoforge.network.PacketDistributor;
 
-import javax.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 
 public final class RequesterMenu extends AbstractRequesterMenu {
 

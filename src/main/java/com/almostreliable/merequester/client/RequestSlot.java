@@ -13,7 +13,8 @@ import com.almostreliable.merequester.network.DragAndDropPacket;
 import appeng.menu.slot.FakeSlot;
 import net.neoforged.neoforge.network.PacketDistributor;
 
-import javax.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.Collections;
 import java.util.List;
 

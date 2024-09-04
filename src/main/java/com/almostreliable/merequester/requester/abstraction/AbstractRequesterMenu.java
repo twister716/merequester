@@ -17,7 +17,7 @@ import appeng.helpers.InventoryAction;
 import appeng.menu.AEBaseMenu;
 import net.neoforged.neoforge.network.PacketDistributor;
 
-import javax.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 
 public abstract class AbstractRequesterMenu extends AEBaseMenu {
 
