@@ -3,9 +3,6 @@
   "minVersion": "0.8.5",
   "package": "com.almostreliable.merequester.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [
-    "registration.InitMenuTypesMixin"
-  ],
   "client": [
     "accessors.EditBoxMixin",
     "accessors.SlotMixin",

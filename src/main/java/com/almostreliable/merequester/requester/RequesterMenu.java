@@ -6,6 +6,7 @@ import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.ItemStack;
 
 import com.almostreliable.merequester.MERequester;
+import com.almostreliable.merequester.Utils;
 import com.almostreliable.merequester.network.RequesterSyncPacket;
 import com.almostreliable.merequester.requester.abstraction.AbstractRequesterMenu;
 import com.almostreliable.merequester.requester.abstraction.RequestTracker;
@@ -20,7 +21,7 @@ public final class RequesterMenu extends AbstractRequesterMenu {
 
     public static final MenuType<RequesterMenu> TYPE = MenuTypeBuilder
         .create(RequesterMenu::new, RequesterBlockEntity.class)
-        .build(MERequester.REQUESTER_ID);
+        .build(Utils.getRL(MERequester.REQUESTER_ID));
 
     @Nullable
     private RequestTracker requestTracker;

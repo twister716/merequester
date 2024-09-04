@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning].
 
 ## Unreleased
 
+### Changed
+
+- switched to deferred registration for menus and removed mixin
+
 ### Fixed
 
 - fixed block breaking particles of the Requester

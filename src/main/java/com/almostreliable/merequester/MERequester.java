@@ -18,9 +18,7 @@ public final class MERequester {
     public static final String TERMINAL_ID = "requester_terminal";
 
     public MERequester(IEventBus modEventBus, ModContainer modContainer) {
-        Registration.BLOCKS.register(modEventBus);
-        Registration.ITEMS.register(modEventBus);
-        Registration.BLOCK_ENTITY_TYPES.register(modEventBus);
+        Registration.init(modEventBus);
         modEventBus.addListener(Registration::registerContents);
         modEventBus.addListener(Registration::registerCapabilities);
         modEventBus.addListener(Registration.Tab::initContents);

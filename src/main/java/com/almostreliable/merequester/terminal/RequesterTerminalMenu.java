@@ -6,6 +6,7 @@ import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.ItemStack;
 
 import com.almostreliable.merequester.MERequester;
+import com.almostreliable.merequester.Utils;
 import com.almostreliable.merequester.network.RequesterSyncPacket;
 import com.almostreliable.merequester.requester.RequesterBlockEntity;
 import com.almostreliable.merequester.requester.abstraction.AbstractRequesterMenu;
@@ -31,7 +32,7 @@ public class RequesterTerminalMenu extends AbstractRequesterMenu {
 
     public static final MenuType<RequesterTerminalMenu> TYPE = MenuTypeBuilder
         .create(RequesterTerminalMenu::new, RequesterTerminalPart.class)
-        .build(MERequester.TERMINAL_ID);
+        .build(Utils.getRL(MERequester.TERMINAL_ID));
 
     private final Long2ObjectOpenHashMap<RequestTracker> byId = new Long2ObjectOpenHashMap<>();
     private final Map<RequesterBlockEntity, RequestTracker> byRequester = new IdentityHashMap<>();
