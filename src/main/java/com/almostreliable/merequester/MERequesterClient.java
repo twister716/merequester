@@ -2,6 +2,7 @@ package com.almostreliable.merequester;
 
 import com.almostreliable.merequester.client.RequesterScreen;
 import com.almostreliable.merequester.client.RequesterTerminalScreen;
+import com.almostreliable.merequester.core.Registration;
 import com.almostreliable.merequester.requester.RequesterMenu;
 import com.almostreliable.merequester.terminal.RequesterTerminalMenu;
 

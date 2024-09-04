@@ -5,7 +5,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 
-import com.almostreliable.merequester.Config;
+import com.almostreliable.merequester.core.Config;
 import com.almostreliable.merequester.requester.abstraction.RequestHost;
 
 import appeng.api.behaviors.GenericInternalInventory;

@@ -1,4 +1,4 @@
-package com.almostreliable.merequester;
+package com.almostreliable.merequester.core;
 
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.Registries;
@@ -10,6 +10,8 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
+import com.almostreliable.merequester.BuildConfig;
+import com.almostreliable.merequester.Utils;
 import com.almostreliable.merequester.requester.Request;
 import com.almostreliable.merequester.requester.RequesterBlock;
 import com.almostreliable.merequester.requester.RequesterBlockEntity;
@@ -104,7 +106,7 @@ public final class Registration {
 
     private Registration() {}
 
-    static void init(IEventBus modEventBus) {
+    public static void init(IEventBus modEventBus) {
         modEventBus.addListener(Registration::registerContents);
         modEventBus.addListener(Registration::registerCapabilities);
         modEventBus.addListener(Tab::initContents);

@@ -12,10 +12,10 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
-import com.almostreliable.merequester.Config;
 import com.almostreliable.merequester.MERequester;
-import com.almostreliable.merequester.Registration;
 import com.almostreliable.merequester.Utils;
+import com.almostreliable.merequester.core.Config;
+import com.almostreliable.merequester.core.Registration;
 import com.almostreliable.merequester.requester.abstraction.RequestHost;
 import com.almostreliable.merequester.requester.status.LinkState;
 import com.almostreliable.merequester.requester.status.RequestStatus;

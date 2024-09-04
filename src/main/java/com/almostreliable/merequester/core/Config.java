@@ -1,10 +1,14 @@
-package com.almostreliable.merequester;
+package com.almostreliable.merequester.core;
 
+import com.almostreliable.merequester.MERequester;
+
+import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
 public final class Config {
 
-    static final ModConfigSpec COMMON_SPEC;
+    private static final ModConfigSpec COMMON_SPEC;
     public static final CommonConfig COMMON;
 
     static {
@@ -14,6 +18,10 @@ public final class Config {
     }
 
     private Config() {}
+
+    public static void init(ModContainer modContainer) {
+        modContainer.registerConfig(ModConfig.Type.COMMON, COMMON_SPEC);
+    }
 
     public static final class CommonConfig {
 

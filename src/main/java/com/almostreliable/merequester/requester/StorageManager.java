@@ -4,7 +4,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;
 
-import com.almostreliable.merequester.Config;
+import com.almostreliable.merequester.core.Config;
 
 import appeng.api.config.FuzzyMode;
 import appeng.api.networking.IStackWatcher;
