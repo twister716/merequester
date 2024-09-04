@@ -1,6 +1,5 @@
 package com.almostreliable.merequester;
 
-import com.almostreliable.merequester.data.MERequesterData;
 import com.almostreliable.merequester.network.PacketHandler;
 
 import com.mojang.logging.LogUtils;
@@ -19,12 +18,7 @@ public final class MERequester {
 
     public MERequester(IEventBus modEventBus, ModContainer modContainer) {
         Registration.init(modEventBus);
-        modEventBus.addListener(Registration::registerContents);
-        modEventBus.addListener(Registration::registerCapabilities);
-        modEventBus.addListener(Registration.Tab::initContents);
         modEventBus.addListener(PacketHandler::onPacketRegistration);
-        MERequesterData.DR.register(modEventBus);
-
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.COMMON_SPEC);
     }
 }
