@@ -49,8 +49,8 @@ public class RequesterScreen extends AbstractRequesterScreen<RequesterMenu> {
         if (requesterReference != null) {
             lines.clear();
             lines.ensureCapacity(Config.COMMON.requests.get());
-            for (var i = 0; i < requesterReference.getRequests().size(); i++) {
-                lines.add(requesterReference.getRequests().get(i));
+            for (var i = 0; i < requesterReference.getRequestManager().size(); i++) {
+                lines.add(requesterReference.getRequestManager().get(i));
             }
         }
         refreshList = false;

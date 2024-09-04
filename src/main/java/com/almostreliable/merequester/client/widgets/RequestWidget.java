@@ -5,7 +5,7 @@ import net.minecraft.client.gui.components.AbstractWidget;
 import com.almostreliable.merequester.client.abstraction.RequestDisplay;
 import com.almostreliable.merequester.client.abstraction.RequesterReference;
 import com.almostreliable.merequester.network.RequestUpdatePacket;
-import com.almostreliable.merequester.requester.Requests.Request;
+import com.almostreliable.merequester.requester.Request;
 
 import appeng.client.gui.style.ScreenStyle;
 import net.neoforged.api.distmarker.Dist;

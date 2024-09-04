@@ -2,7 +2,7 @@ package com.almostreliable.merequester.client.abstraction;
 
 import net.minecraft.network.chat.Component;
 
-import com.almostreliable.merequester.requester.Requests;
+import com.almostreliable.merequester.requester.RequestManager;
 import com.almostreliable.merequester.requester.abstraction.RequestHost;
 
 import net.neoforged.api.distmarker.Dist;
@@ -20,14 +20,14 @@ public class RequesterReference implements RequestHost, Comparable<RequesterRefe
     private final String displayName;
     private final String searchName;
     private final long sortBy;
-    private final Requests requests;
+    private final RequestManager requestManager;
 
     public RequesterReference(long requesterId, String name, long sortBy) {
         this.requesterId = requesterId;
         this.displayName = name;
         this.searchName = name.toLowerCase();
         this.sortBy = sortBy;
-        requests = new Requests(this);
+        requestManager = new RequestManager(this);
     }
 
     // <editor-fold defaultstate="collapsed" desc="Not important for a reference.">
@@ -49,8 +49,8 @@ public class RequesterReference implements RequestHost, Comparable<RequesterRefe
     // </editor-fold>
 
     @Override
-    public Requests getRequests() {
-        return requests;
+    public RequestManager getRequestManager() {
+        return requestManager;
     }
 
     @Override

@@ -1,8 +1,8 @@
 package com.almostreliable.merequester.requester.abstraction;
 
+import com.almostreliable.merequester.requester.Request;
+import com.almostreliable.merequester.requester.RequestManager;
 import com.almostreliable.merequester.requester.RequesterBlockEntity;
-import com.almostreliable.merequester.requester.Requests;
-import com.almostreliable.merequester.requester.Requests.Request;
 
 /**
  * Simplified representation of a {@link Request} and its parent {@link RequesterBlockEntity}
@@ -13,15 +13,15 @@ public final class RequestTracker {
     private final long id;
     private final long sortBy;
     private final String name;
-    private final Requests server;
-    private final Requests client;
+    private final RequestManager server;
+    private final RequestManager client;
 
     RequestTracker(RequesterBlockEntity requester, long id) {
         this.id = id;
         this.sortBy = requester.getSortValue();
         this.name = requester.getTerminalName().getString();
-        this.server = requester.getRequests();
-        this.client = new Requests();
+        this.server = requester.getRequestManager();
+        this.client = new RequestManager();
     }
 
     public long getId() {
@@ -36,11 +36,11 @@ public final class RequestTracker {
         return name;
     }
 
-    public Requests getServer() {
+    public RequestManager getServer() {
         return server;
     }
 
-    public Requests getClient() {
+    public RequestManager getClient() {
         return client;
     }
 }

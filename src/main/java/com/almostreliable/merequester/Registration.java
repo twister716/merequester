@@ -10,7 +10,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
-import com.almostreliable.merequester.data.MERequesterRequest;
+import com.almostreliable.merequester.requester.Request;
 import com.almostreliable.merequester.requester.RequesterBlock;
 import com.almostreliable.merequester.requester.RequesterBlockEntity;
 import com.almostreliable.merequester.requester.RequesterMenu;
@@ -93,12 +93,12 @@ public final class Registration {
         () -> RequesterTerminalMenu.TYPE
     );
 
-    public static final DeferredHolder<DataComponentType<?>, DataComponentType<List<MERequesterRequest>>> EXPORTED_REQUESTS =
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<List<Request.Component>>> EXPORTED_REQUESTS =
         COMPONENTS.register(
             "exported_requests",
-            () -> DataComponentType.<List<MERequesterRequest>> builder()
-                .persistent(MERequesterRequest.CODEC.listOf())
-                .networkSynchronized(MERequesterRequest.STREAM_CODEC.apply(ByteBufCodecs.list()))
+            () -> DataComponentType.<List<Request.Component>> builder()
+                .persistent(Request.Component.CODEC.listOf())
+                .networkSynchronized(Request.Component.STREAM_CODEC.apply(ByteBufCodecs.list()))
                 .build()
         );
 

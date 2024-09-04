@@ -10,7 +10,7 @@ import com.almostreliable.merequester.MERequester;
 import com.almostreliable.merequester.Utils;
 import com.almostreliable.merequester.client.abstraction.AbstractRequesterScreen;
 import com.almostreliable.merequester.client.abstraction.RequesterReference;
-import com.almostreliable.merequester.requester.Requests.Request;
+import com.almostreliable.merequester.requester.Request;
 import com.almostreliable.merequester.terminal.RequesterTerminalMenu;
 
 import appeng.api.config.Settings;
@@ -105,7 +105,7 @@ public class RequesterTerminalScreen<T extends RequesterTerminalMenu> extends Ab
 
             boolean found = searchQuery.isEmpty();
             if (!found) {
-                var requests = requester.getRequests();
+                var requests = requester.getRequestManager();
                 for (var i = 0; i < requests.size(); i++) {
                     found = keyMatchesSearchQuery(requests.getKey(i), searchQuery);
                     if (found) break;
@@ -133,8 +133,8 @@ public class RequesterTerminalScreen<T extends RequesterTerminalMenu> extends Ab
             Collections.sort(requesters);
             List<Request> requests = new ArrayList<>();
             for (var requester : requesters) {
-                for (var i = 0; i < requester.getRequests().size(); i++) {
-                    requests.add(requester.getRequests().get(i));
+                for (var i = 0; i < requester.getRequestManager().size(); i++) {
+                    requests.add(requester.getRequestManager().get(i));
                 }
             }
             lines.addAll(requests);

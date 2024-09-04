@@ -43,7 +43,7 @@ public class StorageManager implements IStorageWatcherNode, INBTSerializable<Com
     @Override
     public void onStackChange(AEKey key, long amount) {
         for (var i = 0; i < storages.length; i++) {
-            if (key.equals(host.getRequests().getKey(i))) {
+            if (key.equals(host.getRequestManager().getKey(i))) {
                 get(i).knownAmount = amount;
                 get(i).pendingAmount = 0;
             }
@@ -51,7 +51,7 @@ public class StorageManager implements IStorageWatcherNode, INBTSerializable<Com
     }
 
     public long computeAmountToCraft(int slot) {
-        var requests = host.getRequests();
+        var requests = host.getRequestManager();
         if (requests.getKey(slot) == null) return 0;
 
         var storedAmount = get(slot).knownAmount + get(slot).pendingAmount;
@@ -92,8 +92,8 @@ public class StorageManager implements IStorageWatcherNode, INBTSerializable<Com
 
     private void populateWatcher(IStackWatcher watcher) {
         for (var i = 0; i < storages.length; i++) {
-            if (host.getRequests().getKey(i) != null) {
-                watcher.add(host.getRequests().getKey(i));
+            if (host.getRequestManager().getKey(i) != null) {
+                watcher.add(host.getRequestManager().getKey(i));
             }
         }
     }
@@ -106,7 +106,7 @@ public class StorageManager implements IStorageWatcherNode, INBTSerializable<Com
     }
 
     private void computeKnownAmount(int slot) {
-        var key = host.getRequests().getKey(slot);
+        var key = host.getRequestManager().getKey(slot);
         if (key == null) return;
         get(slot).knownAmount = host.getMainNodeGrid().getStorageService().getInventory().getAvailableStacks().get(key);
     }

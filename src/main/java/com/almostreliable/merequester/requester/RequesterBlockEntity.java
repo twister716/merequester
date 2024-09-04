@@ -55,7 +55,7 @@ public class RequesterBlockEntity extends AENetworkedBlockEntity implements Requ
     private static final String REQUEST_STATUS_ID = "request_status";
     private static final String STORAGE_MANAGER_ID = "storage_manager";
 
-    private final Requests requests;
+    private final RequestManager requestManager;
     private final StatusState[] requestStatus;
     private final StorageManager storageManager;
     private final IActionSource actionSource;
@@ -68,7 +68,7 @@ public class RequesterBlockEntity extends AENetworkedBlockEntity implements Requ
 
     public RequesterBlockEntity(BlockEntityType<?> blockEntityType, BlockPos pos, BlockState blockState) {
         super(blockEntityType, pos, blockState);
-        requests = new Requests(this);
+        requestManager = new RequestManager(this);
         requestStatus = new StatusState[Config.COMMON.requests.get()];
         Arrays.fill(requestStatus, StatusState.IDLE);
         storageManager = new StorageManager(this);
@@ -87,7 +87,7 @@ public class RequesterBlockEntity extends AENetworkedBlockEntity implements Requ
     @Override
     public void loadTag(CompoundTag tag, HolderLookup.Provider registries) {
         super.loadTag(tag, registries);
-        if (tag.contains(REQUESTS_ID)) requests.deserializeNBT(registries, tag.getCompound(REQUESTS_ID));
+        if (tag.contains(REQUESTS_ID)) requestManager.deserializeNBT(registries, tag.getCompound(REQUESTS_ID));
         if (tag.contains(REQUEST_STATUS_ID)) deserializeStatus(tag.getCompound(REQUEST_STATUS_ID));
         if (tag.contains(STORAGE_MANAGER_ID)) storageManager.deserializeNBT(registries, tag.getCompound(STORAGE_MANAGER_ID));
     }
@@ -95,7 +95,7 @@ public class RequesterBlockEntity extends AENetworkedBlockEntity implements Requ
     @Override
     public void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.saveAdditional(tag, registries);
-        tag.put(REQUESTS_ID, requests.serializeNBT(registries));
+        tag.put(REQUESTS_ID, requestManager.serializeNBT(registries));
         tag.put(REQUEST_STATUS_ID, serializeStatus());
         tag.put(STORAGE_MANAGER_ID, storageManager.serializeNBT(registries));
     }
@@ -106,7 +106,7 @@ public class RequesterBlockEntity extends AENetworkedBlockEntity implements Requ
         if (mode == SettingsFrom.MEMORY_CARD) {
             var exportedRequests = input.get(Registration.EXPORTED_REQUESTS.get());
             if (exportedRequests != null) {
-                requests.fromComponent(exportedRequests);
+                requestManager.fromComponent(exportedRequests);
             }
         }
     }
@@ -115,7 +115,7 @@ public class RequesterBlockEntity extends AENetworkedBlockEntity implements Requ
     public void exportSettings(SettingsFrom mode, DataComponentMap.Builder builder, @Nullable Player player) {
         super.exportSettings(mode, builder, player);
         if (mode == SettingsFrom.MEMORY_CARD) {
-            builder.set(Registration.EXPORTED_REQUESTS.get(), requests.toComponent());
+            builder.set(Registration.EXPORTED_REQUESTS.get(), requestManager.toComponent());
         }
     }
 
@@ -144,8 +144,8 @@ public class RequesterBlockEntity extends AENetworkedBlockEntity implements Requ
     }
 
     @Override
-    public Requests getRequests() {
-        return requests;
+    public RequestManager getRequestManager() {
+        return requestManager;
     }
 
     @Override
@@ -226,8 +226,8 @@ public class RequesterBlockEntity extends AENetworkedBlockEntity implements Requ
 
     private void updateRequestStatus(int slot, StatusState state) {
         requestStatus[slot] = state;
-        if (state.type().translateToClient() != requests.get(slot).getClientStatus()) {
-            requests.get(slot).setClientStatus(state.type().translateToClient());
+        if (state.type().translateToClient() != requestManager.get(slot).getClientStatus()) {
+            requestManager.get(slot).setClientStatus(state.type().translateToClient());
             markForUpdate();
         }
     }

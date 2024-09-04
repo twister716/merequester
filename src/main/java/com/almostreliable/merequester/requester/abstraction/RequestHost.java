@@ -2,7 +2,7 @@ package com.almostreliable.merequester.requester.abstraction;
 
 import net.minecraft.network.chat.Component;
 
-import com.almostreliable.merequester.requester.Requests;
+import com.almostreliable.merequester.requester.RequestManager;
 
 public interface RequestHost {
 
@@ -12,7 +12,7 @@ public interface RequestHost {
 
     boolean isClientSide();
 
-    Requests getRequests();
+    RequestManager getRequestManager();
 
     Component getTerminalName();
 }

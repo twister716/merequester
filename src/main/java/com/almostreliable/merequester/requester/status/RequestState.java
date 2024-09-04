@@ -13,7 +13,7 @@ public class RequestState implements StatusState {
     public StatusState handle(RequesterBlockEntity owner, int index) {
         var amountToCraft = owner.getStorageManager().computeAmountToCraft(index);
         if (amountToCraft <= 0) return IDLE;
-        var key = owner.getRequests().getKey(index);
+        var key = owner.getRequestManager().getKey(index);
 
         var future = owner
             .getMainNodeGrid()

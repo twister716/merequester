@@ -16,7 +16,7 @@ import com.almostreliable.merequester.Utils;
 import com.almostreliable.merequester.client.RequestSlot;
 import com.almostreliable.merequester.client.widgets.RequestWidget;
 import com.almostreliable.merequester.mixin.accessors.WidgetContainerMixin;
-import com.almostreliable.merequester.requester.Requests.Request;
+import com.almostreliable.merequester.requester.Request;
 import com.almostreliable.merequester.requester.abstraction.AbstractRequesterMenu;
 
 import appeng.api.behaviors.ContainerItemStrategies;
@@ -118,7 +118,7 @@ public abstract class AbstractRequesterScreen<M extends AbstractRequesterMenu> e
 
         var name = data.getString(AbstractRequesterMenu.UNIQUE_NAME_ID);
         var sortBy = data.getLong(AbstractRequesterMenu.SORT_BY_ID);
-        var requests = getById(requesterId, name, sortBy).getRequests();
+        var requests = getById(requesterId, name, sortBy).getRequestManager();
 
         for (var i = 0; i < requests.size(); i++) {
             var requestIndex = String.valueOf(i);

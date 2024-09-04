@@ -64,7 +64,7 @@ public class RequesterTerminalMenu extends AbstractRequesterMenu {
 
         // find the first available slot and put the stack there
         for (var requester : requesters) {
-            var targetSlot = requester.getRequests().firstAvailableIndex();
+            var targetSlot = requester.getRequestManager().firstAvailableIndex();
             if (targetSlot == -1) continue;
             byRequester.get(requester).getServer().insertItem(targetSlot, stack, false);
             return stack;

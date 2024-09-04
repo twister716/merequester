@@ -5,7 +5,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 
 import com.almostreliable.merequester.client.RequestSlot;
-import com.almostreliable.merequester.requester.Requests.Request;
+import com.almostreliable.merequester.requester.Request;
 
 import javax.annotation.Nullable;
 import java.util.List;

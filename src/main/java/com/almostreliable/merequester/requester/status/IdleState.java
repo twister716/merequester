@@ -14,7 +14,7 @@ public class IdleState implements StatusState {
             return EXPORT;
         }
 
-        var request = host.getRequests().get(index);
+        var request = host.getRequestManager().get(index);
         if (request.isRequesting() && request.getAmount() > host.getStorageManager().get(index).getKnownAmount()) {
             return REQUEST;
         }
