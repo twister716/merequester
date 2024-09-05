@@ -15,7 +15,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 
-@Mod(value = BuildConfig.MOD_ID, dist = Dist.CLIENT)
+@Mod(value = ModConstants.MOD_ID, dist = Dist.CLIENT)
 public final class MERequesterClient {
 
     public MERequesterClient(IEventBus modEventBus) {

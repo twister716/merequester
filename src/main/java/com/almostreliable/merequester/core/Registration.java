@@ -10,7 +10,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
-import com.almostreliable.merequester.BuildConfig;
+import com.almostreliable.merequester.ModConstants;
 import com.almostreliable.merequester.Utils;
 import com.almostreliable.merequester.requester.Request;
 import com.almostreliable.merequester.requester.RequesterBlock;
@@ -41,17 +41,17 @@ import static com.almostreliable.merequester.MERequester.TERMINAL_ID;
 
 public final class Registration {
 
-    private static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(BuildConfig.MOD_ID);
-    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(BuildConfig.MOD_ID);
+    private static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ModConstants.MOD_ID);
+    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ModConstants.MOD_ID);
     private static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(
         Registries.BLOCK_ENTITY_TYPE,
-        BuildConfig.MOD_ID
+        ModConstants.MOD_ID
     );
     private static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(
         Registries.MENU,
-        BuildConfig.MOD_ID
+        ModConstants.MOD_ID
     );
-    public static final DeferredRegister.DataComponents COMPONENTS = DeferredRegister.createDataComponents(BuildConfig.MOD_ID);
+    public static final DeferredRegister.DataComponents COMPONENTS = DeferredRegister.createDataComponents(ModConstants.MOD_ID);
 
     public static final DeferredBlock<RequesterBlock> REQUESTER_BLOCK = BLOCKS.registerBlock(
         REQUESTER_ID,

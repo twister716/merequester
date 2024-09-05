@@ -3,7 +3,7 @@ plugins {
 }
 
 val modName: String by extra
-val mcVersion: String by extra
-rootProject.name = "${modName.replace(" ", "-")}-$mcVersion-NeoForge"
+val minecraftVersion: String by extra
+rootProject.name = "${modName.replace(" ", "-")}-$minecraftVersion-NeoForge"
 
 enableFeaturePreview("STABLE_CONFIGURATION_CACHE")

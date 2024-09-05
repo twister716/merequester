@@ -14,11 +14,11 @@ public final class Utils {
     private Utils() {}
 
     public static ResourceLocation getRL(String path) {
-        return ResourceLocation.fromNamespaceAndPath(BuildConfig.MOD_ID, path);
+        return ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID, path);
     }
 
     public static MutableComponent translate(String type, String key, Object... args) {
-        return Component.translatable(String.format("%s.%s.%s", type, BuildConfig.MOD_ID, key), args);
+        return Component.translatable(String.format("%s.%s.%s", type, ModConstants.MOD_ID, key), args);
     }
 
     public static void addShiftInfoTooltip(List<Component> tooltip) {
